@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class StepDefATM {
+public class StepDefATM_Sorasak_6210451560 {
 
     ATM atm;
     Bank bank;
@@ -68,6 +68,11 @@ public class StepDefATM {
     public void customer_id_account_balance_is(int id, double balance) {
         assertEquals(balance,
                      bank.getCustomer(id).getAccount().getBalance());
+    }
+
+    @When("I deposit {float} into ATM")
+    public void i_deposit_into_atm(double amount) {
+        atm.deposit(amount);
     }
 
 }
