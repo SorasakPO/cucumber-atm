@@ -7,5 +7,5 @@ Feature: deposit
     When I login to ATM with id 77 and pin 123
 
   Scenario: Successful deposit money
-    When I deposit 5000.00 into ATM
+    When deposit 5000.00 into my bankAccount
     Then my account balance is 55000.00
